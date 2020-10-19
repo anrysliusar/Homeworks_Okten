@@ -1,0 +1,49 @@
+h1{
+    text-align: center ;
+    background: rgba(173, 255, 47, 0.87);
+    margin: 0;
+    padding: 20px;
+}
+h2{
+   text-align: center ;      
+   background: rgba(173, 255, 47, 0.87);
+   margin: 5px;
+   padding: 10px;
+
+}
+.gallery{
+    background: lightskyblue;
+}
+a {
+  background-color: red;
+  box-shadow: 0 5px 0 darkred;
+  color: white;
+  padding: 2px 5px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.links{
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    background: rgba(51, 228, 245, 0.55);
+}
+body{
+    background: lightskyblue;;
+}
+div{
+    display: inline-flex;
+    text-align: center;
+    background: rgba(173, 255, 47, 0.87);
+    font-size: 30px;
+    border: 1px green;
+    border-radius: 15%;
+    margin: 20px;
+    padding: 5px;
+    }
+.main-img{
+    margin: 10px;
+    border-radius: 10%;
+}
+
