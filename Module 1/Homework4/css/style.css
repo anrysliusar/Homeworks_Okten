@@ -1,0 +1,92 @@
+.header-top{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-logo{
+    padding-top: 15px;
+    font-size: 36px;
+    text-align: center;
+
+    text-transform: uppercase;
+    font-family: Georgia, serif;
+}
+
+.header-main-wrap{
+    color: white;
+    height: 110px;
+    background: #7e0019;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-main-layout{
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.lang{
+    padding-top: 10px;
+    padding-right: 25px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Fira Sans', serif;
+}
+.header-main-options{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Fira Sans', serif;
+
+}
+.main-logo-info{
+    text-align: center;
+    font-family: 'Fira Sans', serif;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.header-menu-1, .header-menu-2 {
+    height: 45px;
+    padding-right: 25%;
+    padding-left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Fira Sans', serif;
+    font-weight: 800;
+
+}
+.nav-item-1, .nav-item-2 {
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Fira Sans', serif ;
+    color: black;
+    font-size: 12px;
+}
+.all-sections{
+    padding-top: 30px;
+}
+.all-section-text{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Fira Sans', serif;
+}
+.btn-club{
+    color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    border-color: white;
+    border-width: 5px;
+    text-transform: uppercase;
+    background: #90001c;
+}
+
