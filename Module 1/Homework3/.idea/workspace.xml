@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="795e141e-1e52-4bda-a0b5-5894bb02efc5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Homework1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,9 @@
       <option name="presentableId" value="Default" />
       <updated>1603282024532</updated>
       <workItem from="1603282027748" duration="3383000" />
+      <workItem from="1603286621820" duration="2047000" />
+      <workItem from="1603371499956" duration="2432000" />
+      <workItem from="1603703813979" duration="670000" />
     </task>
     <servers />
   </component>
@@ -84,11 +87,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-318" y="17" width="1038" height="807" key="#Project_Structure" timestamp="1603282035863">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="-318" y="17" width="1038" height="807" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1603282035863" />
+    <state x="209" y="96" key="new project wizard" timestamp="1603703881474">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="96" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1603703881474" />
   </component>
 </project>
