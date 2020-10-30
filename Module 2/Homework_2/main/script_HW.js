@@ -151,6 +151,7 @@ for (let minute = 0; minute < 3; minute++) {
     }
 }
 
+document.write('******************************************************************', '<br>')
 
 for (let hour = 0; hour < 3; hour++) {
     for (let minute = 0; minute < 60; minute++) {
