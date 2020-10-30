@@ -18,7 +18,7 @@ let arrayOfAnyValues = [];
 arrayOfAnyValues[0] = 'w1';
 arrayOfAnyValues[1] = 'sdsd';
 arrayOfAnyValues[2] = 'dfg';
-console.log(arrayOfAnyValues)
+console.log(arrayOfAnyValues);
 //task 2
 //За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
 //За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
