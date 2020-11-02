@@ -253,7 +253,7 @@ for (let citiesElement of cities) {
 
 let cloneCars2 = []
 for (let cars2Element of cars2) {
-    s = JSON.stringify(cars2Element)
+    let s = JSON.stringify(cars2Element)
     cloneCars2.push(JSON.parse(s))
 }
 console.log(cloneCars2);
@@ -354,7 +354,7 @@ let arrOfAdress = []
 
 for (let user of users) {
     arrOfAdress.push(user.address)
-    result = ''
+    let result = ''
     for (let addressKey in user.address) {
         result += user.address[addressKey]
         result += ' '
@@ -371,7 +371,7 @@ for (let user of users) {
     const p2 = document.createElement('p')
     const p3 = document.createElement('p')
     const h3 = document.createElement('h3')
-    result = ''
+    let result = ''
     for (let addressKey in user.address) {
         result += user.address[addressKey]
         result += ' '
