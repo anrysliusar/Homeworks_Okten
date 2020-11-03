@@ -74,7 +74,7 @@ let bag = {
         numSection : 3
 }
 
-//task 3
+//task 3 
 //- При помощи for in вывести все ключи всех объектов из задания 1 и 2
 //***********************************************************************************************************************
 
@@ -535,8 +535,8 @@ document.body.appendChild((table))
 // - знайти всі div та змінити ім колір на червоний
 //***********************************************************************************************************************
 
-let components = document.getElementsByTagName('*')
-for (const tag of components) {
+let allTags = document.getElementsByTagName('*')
+for (const tag of allTags) {
     if(tag.getAttribute('class'))
         console.log(tag);
 }
