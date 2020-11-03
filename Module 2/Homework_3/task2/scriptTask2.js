@@ -470,11 +470,11 @@ for (let elem of arrr) {
 
 }
 
-task 19
-- за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені
-- за допомоги document.createElement, appendChild та циклу створити таблицю на 10 рядків з трьома ячейками всередені
-- за допомоги document.createElement, appendChild та 2х циклів створити таблицю на 10 рядків з 5 ячейками всередені
-- за допомоги document.createElement, appendChild та 2х циклів створити таблицю на n рядків з m ячейками всередені. n та m отримати з prompt
+// task 19
+// - за допомоги document.createElement та appendChild створити таблицю на 1 рядок з трьома ячейками всередені
+// - за допомоги document.createElement, appendChild та циклу створити таблицю на 10 рядків з трьома ячейками всередені
+// - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на 10 рядків з 5 ячейками всередені
+// - за допомоги document.createElement, appendChild та 2х циклів створити таблицю на n рядків з m ячейками всередені. n та m отримати з prompt
 
 let table1 = document.createElement('table')
 let tr1 = document.createElement('tr')
@@ -528,11 +528,12 @@ for (let i = 0; i < m; i++) {
 }
 document.body.appendChild((table))
 
-
+//task 20
 // --Завантажити з мережі будь-який шаблон сайту. Підключити до нього свій скріпт-файл. У файлі прописати наступні доступи та дії
 // - знайти всі елементі, які мають class
 // - знайти всі параграфи ,та змінити текст на hello oktenweb!
-//     - знайти всі div та змінити ім колір на червоний
+// - знайти всі div та змінити ім колір на червоний
+//***********************************************************************************************************************
 
 let components = document.getElementsByTagName('*')
 for (const tag of components) {
