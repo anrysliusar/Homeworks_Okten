@@ -175,8 +175,6 @@
 //         let tempObj = array[i]
 //         array[i] = array[i+1]
 //         array[i+1] = tempObj
-//     }else{
-//         console.log('index error')
 //     }
 //     return array
 // }
