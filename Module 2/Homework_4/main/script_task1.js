@@ -30,10 +30,8 @@
 //         return a;
 //     }else if (b > a && b > c){
 //         return b;
-//     }else {
-//         return c;
 //     }
-//     return 0;
+//     return c;
 // }
 //
 // console.log(findMaxValue(1, 4, 3));
@@ -43,10 +41,8 @@
 //         return a;
 //     }else if (b < a && b < c){
 //         return b;
-//     }else {
-//         return c;
 //     }
-//     return 0;
+//     return c;
 // }
 //
 // console.log(findMinValue(1, 4, 3));
