@@ -1,290 +1,290 @@
-//task 1
-//- создать 5 объектов. В каждом объекте не менее 3х полей. Все объекты разные по набору полей. (Т.е поле name  должно присутствовать только 1 раз в одном объекте )
-//**********************************************************************************************************************
-
-let dog = {
-    breed : 'Labrador Retriever',
-    age : 1,
-    weight : 20
-};
-
-let human = {
-    name : 'Petro',
-    hobby : 'football',
-    isMarried : false,
-    height : 175
-}
-
-let car = {
-    manufacturer : 'Toyota',
-    engine : 'internal combustion',
-    wheel : 4,
-    colour : 'black'
-};
-
-let laptop = {
-    screen : 'IPS',
-    keyboard : 'virtual',
-    isTouchpad : true
-}
-
-let house = {
-    height: 30,
-    wall : 'wooden',
-    door : 'metal'
-};
-
-//task 2
-//- создать 5 объектов с полностью разным набором полей. В каждом объекте должен присутсвовать массив и внутренний объект. Опишите что угодно, машину, картину, болт... Пример : let man = { name: 'kokos', skills : ['java','js'] , wife: { name: 'cherry' } };
-//**********************************************************************************************************************
-
-let house2 = {
-    roof : {frame : 'wooden' , roofing : 'slate'},
-    window : ['wooden', 'plastic'],
-    numOfFloor : 2,
-    door : 1
-};
-
-let driver = {
-    category : ['A', 'A1', 'B', 'B1', 'C1'],
-    ownCar : {sedan : 'Ford Mondeo', crossover : 'Kia Sportage'},
-    experience : 5,
-    isValidLicense : true,
-    hasCarCrash : false
-}
-
-let computer = {
-    colour : 'grey',
-    systemUnit : {processor : 'core i5', ram : 8, hdd : null, ssd: 500},
-    keyboard : ['esc', 'ctrl', 'alt', '1', 'a', 'fn'],
-};
-
-let table = {
-    material : ['wooden', 'glass'],
-    stokke : {hasAdditionSection : true, colour : 'dark'},
-    length : 2,
-    width : 1
-
-}
-
-let bag = {
-        fabric : ['skin', 'cloth'],
-        zipper : {material : 'metal', colour : 'grey'},
-        hasHandle : true,
-        numSection : 3
-}
-
-//task 3 
-//- При помощи for in вывести все ключи всех объектов из задания 1 и 2
-//***********************************************************************************************************************
-
-for (let dogKey in dog) {
-    console.log(dogKey);
-}
-
-for (let humanKey in human) {
-    console.log(humanKey);
-}
-
-for (let carKey in car) {
-    console.log(carKey);
-}
-
-for (let  laptopKey in laptop) {
-    console.log(laptopKey);
-}
-
-for (let houseKey in house) {
-    console.log(houseKey);
-}
-
-for (let house2Key in house2) {
-    console.log(house2Key);
-}
-
-for (let driverKey in driver) {
-    console.log(driverKey);
-}
-
-for (let computerKey in computer) {
-    console.log(computerKey);
-}
-
-for (let tableKey in table) {
-    console.log(tableKey);
-}
-
-for (let bagKey in bag) {
-    console.log(bagKey);
-}
-
-//task 4
-//- При помощи Object.keys вывести все ключи всех объектов из задания 1 и 2
-//***********************************************************************************************************************
-
-console.log(Object.keys(house))
-console.log(Object.keys(house2))
-console.log(Object.keys(human))
-console.log(Object.keys(car))
-console.log(Object.keys(laptop))
-console.log(Object.keys(dog))
-console.log(Object.keys(computer))
-console.log(Object.keys(table))
-console.log(Object.keys(bag))
-console.log(Object.keys(driver))
-
-//task 5
-//- При - Создать массив из 10 объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет. (Значаения полей могу быть выдуманными)
-//***********************************************************************************************************************
-
-let cars1 = [{model : 'Lada',      yearOfIssue : 2010,  powerful : 98,  colour : 'green'},
-        {model : 'Toyota',     yearOfIssue : 2009,  powerful : 112, colour : 'yellow'},
-        {model : 'Volvo',      yearOfIssue : 2008,  powerful : 134, colour : 'red'},
-        {model : 'Volkswagen', yearOfIssue : 2007,  powerful : 167, colour : 'blue'},
-        {model : 'BMW',        yearOfIssue : 2006,  powerful : 176, colour : 'grey'},
-        {model : 'Ford',       yearOfIssue : 2005,  powerful : 134, colour : 'pink'},
-        {model : 'Mazda',      yearOfIssue : 2004,  powerful : 167, colour : 'black'},
-        {model : 'KIA',        yearOfIssue : 2003,  powerful : 174, colour : 'white'},
-        {model : 'Renault',    yearOfIssue : 2002,  powerful : 131, colour : 'brown'},
-        {model : 'Audi',       yearOfIssue : 2001,  powerful : 145, colour : 'black'}]
-
-//task 6
-//- Создать массив объектов cities и заполнить его объектами с полями название, популяция, страна, регион. (Значаения полей могу быть выдуманными)
-//***********************************************************************************************************************
-
-let cities = [{name : 'Tokio',    population : 10000000, country : 'Japan',    region : 'Asia'},
-              {name : 'New York', population : 5000000,  country : 'USA',      region : 'America'},
-              {name : 'Berlin',   population : 3000000,  country : 'Germany',  region : 'Europe'},
-              {name : 'Harare',   population : 1600000,  country : 'Zimbabwe', region : 'Afric'},
-              {name : 'Kiev',     population : 3000000,  country : 'Ukraine',  region : 'Europe'}]
-
-//task 7
-//- Создать массив объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет, водитель. Водитель является отдельным объектом с полями имя, возраст, пол, стаж.
-//***********************************************************************************************************************
-
-let cars2 = [{model : 'Ford',    yearOfIssue : 2005,  powerful : 134, colour : 'pink',  driverC : {name : 'Viktor', age : 45, sex : 'Male',   experience : 25}},
-             {model : 'Mazda',   yearOfIssue : 2004,  powerful : 167, colour : 'black', driverC : {name : 'Vasya',  age : 26, sex : 'Male',   experience : 5}},
-             {model : 'KIA',     yearOfIssue : 2003,  powerful : 174, colour : 'white', driverC : {name : 'Andrew', age : 35, sex : 'Male',   experience : 10}},
-             {model : 'Renault', yearOfIssue : 2002,  powerful : 131, colour : 'brown', driverC : {name : 'Sofia',  age : 30, sex : 'Female', experience : 12}},
-             {model : 'Audi',    yearOfIssue : 2001,  powerful : 145, colour : 'black', driverC : {name : 'Kate',   age : 21, sex : 'Female', experience : 1}}]
-
-//task 8,9,10
-//- проитерировать каждый массив из задания 5,6,7 при помощи while.
-//- проитерировать каждый массив из задания 5,6,7 при помощи for .
-// - проитерировать каждый массив из задания 5,6,7 при помощи  for of.
-//***********************************************************************************************************************
-
-let i = 0
-while (i < cars1.length){
-    console.log(cars1[i]);
-    i++
-}
-
-i = 0
-while (i < cars2.length){
-    console.log(cars2[i]);
-    i++
-}
-
-i = 0
-while (i < cities.length){
-    console.log(cars2[i]);
-    i++
-}
-
-for (let j = 0; j < cars1.length; j++) {
-    console.log(cars1[j]);
-}
-
-for (let j = 0; j < cars2.length; j++) {
-    console.log(cars2[j]);
-}
-
-for (let j = 0; j < cities.length; j++) {
-    console.log(cities[j]);
-}
-
-for (let cars1Element of cars1) {
-    console.log(cars1Element);
-}
-
-for (let cars2Element of cars2) {
-    console.log(cars2Element);
-}
-
-for (let citiesElement of cities) {
-    console.log(citiesElement);
-}
-
-//task 11
-// - взять объекты из задания 1 и превратить каждый в json.
-// - взять json из задания 11 и превратить их обратно в объекты.
-//***********************************************************************************************************************
-
-let dog11 = JSON.stringify(dog)
-let human11 = JSON.stringify(human)
-let car11 = JSON.stringify(car)
-let laptop11= JSON.stringify(laptop)
-let house11 = JSON.stringify(house)
-
-let dog12 = JSON.parse(dog11)
-let human12 = JSON.parse(human11)
-let car12 = JSON.parse(car11)
-let laptop12 = JSON.parse(laptop11)
-let house12 = JSON.parse(house11)
-
-//task 12
-// - взять массив из задания 5,в цикле перебрать его объекты превратив их в json .
-// - взять массив из задания 6,в цикле перебрать его объекты превратив их в json .
-//***********************************************************************************************************************
-
-for (let cars1Element of cars1) {
-    cars1Element = JSON.stringify(cars1Element)
-}
-
-for (let citiesElement of cities) {
-    citiesElement = JSON.stringify(citiesElement)
-}
-
-//task 13
-// - взять массив из задания 7,в цикле перебрать его объекты превратив их в json и сразу скоприовать в новый массив.
-//***********************************************************************************************************************
-
-
-let cloneCars2 = []
-for (let cars2Element of cars2) {
-    let s = JSON.stringify(cars2Element)
-    cloneCars2.push(JSON.parse(s))
-}
-console.log(cloneCars2);
+// //task 1
+// //- создать 5 объектов. В каждом объекте не менее 3х полей. Все объекты разные по набору полей. (Т.е поле name  должно присутствовать только 1 раз в одном объекте )
+// //**********************************************************************************************************************
+//
+// let dog = {
+//     breed : 'Labrador Retriever',
+//     age : 1,
+//     weight : 20
+// };
+//
+// let human = {
+//     name : 'Petro',
+//     hobby : 'football',
+//     isMarried : false,
+//     height : 175
+// }
+//
+// let car = {
+//     manufacturer : 'Toyota',
+//     engine : 'internal combustion',
+//     wheel : 4,
+//     colour : 'black'
+// };
+//
+// let laptop = {
+//     screen : 'IPS',
+//     keyboard : 'virtual',
+//     isTouchpad : true
+// }
+//
+// let house = {
+//     height: 30,
+//     wall : 'wooden',
+//     door : 'metal'
+// };
+//
+// //task 2
+// //- создать 5 объектов с полностью разным набором полей. В каждом объекте должен присутсвовать массив и внутренний объект. Опишите что угодно, машину, картину, болт... Пример : let man = { name: 'kokos', skills : ['java','js'] , wife: { name: 'cherry' } };
+// //**********************************************************************************************************************
+//
+// let house2 = {
+//     roof : {frame : 'wooden' , roofing : 'slate'},
+//     window : ['wooden', 'plastic'],
+//     numOfFloor : 2,
+//     door : 1
+// };
+//
+// let driver = {
+//     category : ['A', 'A1', 'B', 'B1', 'C1'],
+//     ownCar : {sedan : 'Ford Mondeo', crossover : 'Kia Sportage'},
+//     experience : 5,
+//     isValidLicense : true,
+//     hasCarCrash : false
+// }
+//
+// let computer = {
+//     colour : 'grey',
+//     systemUnit : {processor : 'core i5', ram : 8, hdd : null, ssd: 500},
+//     keyboard : ['esc', 'ctrl', 'alt', '1', 'a', 'fn'],
+// };
+//
+// let table = {
+//     material : ['wooden', 'glass'],
+//     stokke : {hasAdditionSection : true, colour : 'dark'},
+//     length : 2,
+//     width : 1
+//
+// }
+//
+// let bag = {
+//         fabric : ['skin', 'cloth'],
+//         zipper : {material : 'metal', colour : 'grey'},
+//         hasHandle : true,
+//         numSection : 3
+// }
+//
+// //task 3
+// //- При помощи for in вывести все ключи всех объектов из задания 1 и 2
+// //***********************************************************************************************************************
+//
+// for (let dogKey in dog) {
+//     console.log(dogKey);
+// }
+//
+// for (let humanKey in human) {
+//     console.log(humanKey);
+// }
+//
+// for (let carKey in car) {
+//     console.log(carKey);
+// }
+//
+// for (let  laptopKey in laptop) {
+//     console.log(laptopKey);
+// }
+//
+// for (let houseKey in house) {
+//     console.log(houseKey);
+// }
+//
+// for (let house2Key in house2) {
+//     console.log(house2Key);
+// }
+//
+// for (let driverKey in driver) {
+//     console.log(driverKey);
+// }
+//
+// for (let computerKey in computer) {
+//     console.log(computerKey);
+// }
+//
+// for (let tableKey in table) {
+//     console.log(tableKey);
+// }
+//
+// for (let bagKey in bag) {
+//     console.log(bagKey);
+// }
+//
+// //task 4
+// //- При помощи Object.keys вывести все ключи всех объектов из задания 1 и 2
+// //***********************************************************************************************************************
+//
+// console.log(Object.keys(house))
+// console.log(Object.keys(house2))
+// console.log(Object.keys(human))
+// console.log(Object.keys(car))
+// console.log(Object.keys(laptop))
+// console.log(Object.keys(dog))
+// console.log(Object.keys(computer))
+// console.log(Object.keys(table))
+// console.log(Object.keys(bag))
+// console.log(Object.keys(driver))
+//
+// //task 5
+// //- При - Создать массив из 10 объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет. (Значаения полей могу быть выдуманными)
+// //***********************************************************************************************************************
+//
+// let cars1 = [{model : 'Lada',      yearOfIssue : 2010,  powerful : 98,  colour : 'green'},
+//         {model : 'Toyota',     yearOfIssue : 2009,  powerful : 112, colour : 'yellow'},
+//         {model : 'Volvo',      yearOfIssue : 2008,  powerful : 134, colour : 'red'},
+//         {model : 'Volkswagen', yearOfIssue : 2007,  powerful : 167, colour : 'blue'},
+//         {model : 'BMW',        yearOfIssue : 2006,  powerful : 176, colour : 'grey'},
+//         {model : 'Ford',       yearOfIssue : 2005,  powerful : 134, colour : 'pink'},
+//         {model : 'Mazda',      yearOfIssue : 2004,  powerful : 167, colour : 'black'},
+//         {model : 'KIA',        yearOfIssue : 2003,  powerful : 174, colour : 'white'},
+//         {model : 'Renault',    yearOfIssue : 2002,  powerful : 131, colour : 'brown'},
+//         {model : 'Audi',       yearOfIssue : 2001,  powerful : 145, colour : 'black'}]
+//
+// //task 6
+// //- Создать массив объектов cities и заполнить его объектами с полями название, популяция, страна, регион. (Значаения полей могу быть выдуманными)
+// //***********************************************************************************************************************
+//
+// let cities = [{name : 'Tokio',    population : 10000000, country : 'Japan',    region : 'Asia'},
+//               {name : 'New York', population : 5000000,  country : 'USA',      region : 'America'},
+//               {name : 'Berlin',   population : 3000000,  country : 'Germany',  region : 'Europe'},
+//               {name : 'Harare',   population : 1600000,  country : 'Zimbabwe', region : 'Afric'},
+//               {name : 'Kiev',     population : 3000000,  country : 'Ukraine',  region : 'Europe'}]
+//
+// //task 7
+// //- Создать массив объектов cars и заполнить его машинами с полями модель, год выпуска, мощность, цвет, водитель. Водитель является отдельным объектом с полями имя, возраст, пол, стаж.
+// //***********************************************************************************************************************
+//
+// let cars2 = [{model : 'Ford',    yearOfIssue : 2005,  powerful : 134, colour : 'pink',  driverC : {name : 'Viktor', age : 45, sex : 'Male',   experience : 25}},
+//              {model : 'Mazda',   yearOfIssue : 2004,  powerful : 167, colour : 'black', driverC : {name : 'Vasya',  age : 26, sex : 'Male',   experience : 5}},
+//              {model : 'KIA',     yearOfIssue : 2003,  powerful : 174, colour : 'white', driverC : {name : 'Andrew', age : 35, sex : 'Male',   experience : 10}},
+//              {model : 'Renault', yearOfIssue : 2002,  powerful : 131, colour : 'brown', driverC : {name : 'Sofia',  age : 30, sex : 'Female', experience : 12}},
+//              {model : 'Audi',    yearOfIssue : 2001,  powerful : 145, colour : 'black', driverC : {name : 'Kate',   age : 21, sex : 'Female', experience : 1}}]
+//
+// //task 8,9,10
+// //- проитерировать каждый массив из задания 5,6,7 при помощи while.
+// //- проитерировать каждый массив из задания 5,6,7 при помощи for .
+// // - проитерировать каждый массив из задания 5,6,7 при помощи  for of.
+// //***********************************************************************************************************************
+//
+// let i = 0
+// while (i < cars1.length){
+//     console.log(cars1[i]);
+//     i++
+// }
+//
+// i = 0
+// while (i < cars2.length){
+//     console.log(cars2[i]);
+//     i++
+// }
+//
+// i = 0
+// while (i < cities.length){
+//     console.log(cars2[i]);
+//     i++
+// }
+//
+// for (let j = 0; j < cars1.length; j++) {
+//     console.log(cars1[j]);
+// }
+//
+// for (let j = 0; j < cars2.length; j++) {
+//     console.log(cars2[j]);
+// }
+//
+// for (let j = 0; j < cities.length; j++) {
+//     console.log(cities[j]);
+// }
+//
+// for (let cars1Element of cars1) {
+//     console.log(cars1Element);
+// }
+//
+// for (let cars2Element of cars2) {
+//     console.log(cars2Element);
+// }
+//
+// for (let citiesElement of cities) {
+//     console.log(citiesElement);
+// }
+//
+// //task 11
+// // - взять объекты из задания 1 и превратить каждый в json.
+// // - взять json из задания 11 и превратить их обратно в объекты.
+// //***********************************************************************************************************************
+//
+// let dog11 = JSON.stringify(dog)
+// let human11 = JSON.stringify(human)
+// let car11 = JSON.stringify(car)
+// let laptop11= JSON.stringify(laptop)
+// let house11 = JSON.stringify(house)
+//
+// let dog12 = JSON.parse(dog11)
+// let human12 = JSON.parse(human11)
+// let car12 = JSON.parse(car11)
+// let laptop12 = JSON.parse(laptop11)
+// let house12 = JSON.parse(house11)
+//
+// //task 12
+// // - взять массив из задания 5,в цикле перебрать его объекты превратив их в json .
+// // - взять массив из задания 6,в цикле перебрать его объекты превратив их в json .
+// //***********************************************************************************************************************
+//
+// for (let cars1Element of cars1) {
+//     cars1Element = JSON.stringify(cars1Element)
+// }
+//
+// for (let citiesElement of cities) {
+//     citiesElement = JSON.stringify(citiesElement)
+// }
+//
+// //task 13
+// // - взять массив из задания 7,в цикле перебрать его объекты превратив их в json и сразу скоприовать в новый массив.
+// //***********************************************************************************************************************
+//
+//
+// let cloneCars2 = []
+// for (let cars2Element of cars2) {
+//     let s = JSON.stringify(cars2Element)
+//     cloneCars2.push(JSON.parse(s))
+// }
+// console.log(cloneCars2);
 
 //task 14, 15
 // - Создать массив пользователей. У каждого пользователя обязательно должено быть поле skills которое является массивом. Проитерировать массив пользователей и в каждом пользователе проитерировать его массив skills. Скопировать все skills всех пользователей в отедльный массив
 // - За допомогою 2х циклів циклів проітеррувати  даний масив і масив кожного об'єкта.
 //***********************************************************************************************************************
 
-let users = [{name: 'vasya', age: 31, status: false, skills: ['java', 'js']},
-             {name: 'petya', age: 30, status: true,  skills: ['java', 'js', 'html']},
-             {name: 'kolya', age: 29, status: true,  skills: ['mysql', ',mongo']},
-             {name: 'olya',  age: 28, status: false, skills: ['java', 'js']},
-             {name: 'max',   age: 30, status: true,  skills: ['mysql', ',mongo']}];
-
-arrOfSkills = []
-
-for (let user of users) {
-    console.log(user);
-    for (let skill of user.skills) {
-        arrOfSkills.push(skill)
-    }
-
-}
-console.log(arrOfSkills);
-
-for (let user of users) {
-    for (let userKey in user) {
-        console.log(userKey);
-    }
-}
+// let users = [{name: 'vasya', age: 31, status: false, skills: ['java', 'js']},
+//              {name: 'petya', age: 30, status: true,  skills: ['java', 'js', 'html']},
+//              {name: 'kolya', age: 29, status: true,  skills: ['mysql', ',mongo']},
+//              {name: 'olya',  age: 28, status: false, skills: ['java', 'js']},
+//              {name: 'max',   age: 30, status: true,  skills: ['mysql', ',mongo']}];
+//
+// arrOfSkills = []
+//
+// for (let user of users) {
+//     console.log(user);
+//     for (let skill of user.skills) {
+//         arrOfSkills.push(skill)
+//     }
+//
+// }
+// console.log(arrOfSkills);
+//
+// for (let user of users) {
+//     for (let userKey in user) {
+//         console.log(userKey);
+//     }
+// }
 
 //task 16
 // - З масиву users за допомогою циклу витягнути адреси користувачів і записати (скопіювати) їх в інший порожній масив
@@ -535,17 +535,17 @@ document.body.appendChild((table))
 // - знайти всі div та змінити ім колір на червоний
 //***********************************************************************************************************************
 
-let allTags = document.getElementsByTagName('*')
-for (const tag of allTags) {
-    if(tag.getAttribute('class'))
-        console.log(tag);
-}
-
-let elementByTag1 = document.getElementsByTagName('p')
-for (let tag of elementByTag1) {
-    tag.innerText = 'hello oktenweb'
-}
-let elementByTag2 = document.getElementsByTagName('div')
-for (let tag of elementByTag2) {
-    tag.style.backgroundColor = 'red'
-}
+// let allTags = document.getElementsByTagName('*')
+// for (const tag of allTags) {
+//     if(tag.getAttribute('class'))
+//         console.log(tag);
+// }
+//
+// let elementByTag1 = document.getElementsByTagName('p')
+// for (let tag of elementByTag1) {
+//     tag.innerText = 'hello oktenweb'
+// }
+// let elementByTag2 = document.getElementsByTagName('div')
+// for (let tag of elementByTag2) {
+//     tag.style.backgroundColor = 'red'
+// }
