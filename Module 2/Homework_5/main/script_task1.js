@@ -260,19 +260,7 @@
 //         this.age = age
 //         this.footSize = footSize
 // }
-//
-// const nastia = new Cinderella('Anastasia', 18, 35)
-// const karine = new Cinderella('Karine', 17, 37)
-// const olga = new Cinderella('Olga', 19, 36)
-// const julia = new Cinderella('Julia', 20, 39)
-// const sofia = new Cinderella('Sofia', 21, 38)
-// const annya = new Cinderella('Annya', 23, 34)
-// const alla = new Cinderella('Alla', 19, 33)
-// const ksenia = new Cinderella('Ksenia', 25, 40)
-// const ira = new Cinderella('Ira', 24, 32)
-//
-// const ladies = [nastia, karine, olga, julia, sofia, annya, alla, ksenia, ira]
-//
+
 // function Prince(name, age, slipperSize) {
 //     this.name = name
 //     this.age = age
