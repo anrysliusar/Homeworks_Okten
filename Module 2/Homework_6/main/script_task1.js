@@ -247,11 +247,7 @@
 //     }
 // });
 
-// usersWithAddress.filter(value => {
-//     if (!(value.status) && value.age < 30) {
-//         return value
-//     }
-// });
+// usersWithAddress.filter(value => !(value.status) && value.age < 30)
 
 // usersWithAddress.filter(value => {
 //     if (!(value.address.number % 2)) {
