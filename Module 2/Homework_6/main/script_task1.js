@@ -121,82 +121,66 @@
 //              {producer:"mercedes",model: "e200",   year: 1990, color:"silver",type: "sedan",engine: "eng200",volume: 2,power: 180},
 //              {producer:"mercedes",model: "e63",    year: 2017, color:"yellow",type: "sedan",engine: "amg63",volume:3,power: 400},
 //              {producer:"mercedes",model: "c250",   year: 2017, color:"red",type: "sedan",engine: "eng25",volume: 2.5,power: 230} ];
-
+//
 // cars.filter(value => {
 //     if (value.volume > 3){
 //         return value
 //     }
 // });
-
+//
 // cars.filter(value => {
 //     if (value.volume === 2){
 //         return value
 //     }
 // });
-
+//
 // cars.filter(value => {
 //     if (value.producer === "mercedes" ){
 //         return value
 //     }
 // });
-
+//
 // cars.filter(value => {
-//     if (value.volume > 3) {
-//         if (value.producer === "mercedes") {
-//             return value
-//         }
+//     if (value.volume > 3 && value.producer === "mercedes") {
+//         return value
 //     }
 // })
-
+//
 // cars.filter(value => {
-//     if (value.volume > 3) {
-//         if (value.producer === "subaru") {
-//             return value
-//         }
+//     if (value.volume > 3 && value.producer === "subaru") {
+//         return value
 //     }
 // })
-
+//
 // cars.filter(value => {
-//     if (value.power > 300) {
-//         if (value.producer === "subaru") {
-//             return value
-//         }
+//     if (value.power > 300 && value.producer === "subaru") {
+//         return value
 //     }
 // })
-
+//
 // cars.filter(value => value.engine.startsWith('ej'));
-
+//
 // cars.filter(value => {
-//     if (value.power > 300) {
-//         if (value.producer === "subaru") {
-//             if (value.engine.startsWith('ej')) {
-//                 return value
-//             }
-//         }
+//     if (value.power > 300 && value.producer === "subaru" && value.engine.startsWith('ej')) {
+//         return value
 //     }
 // });
-
+//
 // cars.filter(value => {
-//     if (value.volume < 3) {
-//         if (value.producer === "mercedes") {
-//             return value
-//         }
+//     if (value.volume < 3 && value.producer === "mercedes") {
+//         return value
 //     }
 // })
-
+//
 // cars.filter(value => {
-//     if (value.volume > 2) {
-//         if (value.power > 250) {
-//             return value
-//         }
+//     if (value.volume > 2 && value.power > 250) {
+//         return value
 //     }
 // })
-
+//
 // cars.filter(value => {
-//     if (value.power > 250) {
-//         if (value.producer === "bmw") {
-//             return value
-//         }
+//     if (value.power > 250 && value.producer === "bmw") {
+//         return value
 //     }
 // });
 
@@ -259,20 +243,18 @@
 
 // usersWithAddress.filter(value => {
 //     if (!(value.status)) {
-//         return true
+//         return value
 //     }
 // });
 
 // usersWithAddress.filter(value => {
-//     if (!(value.status)) {
-//         if (value.age < 30){
-//             return true
-//         }
+//     if (!(value.status) && value.age < 30) {
+//         return value
 //     }
 // });
 
 // usersWithAddress.filter(value => {
 //     if (!(value.address.number % 2)) {
-//         return true
+//         return value
 //     }
 // });
