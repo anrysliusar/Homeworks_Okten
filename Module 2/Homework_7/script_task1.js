@@ -1,36 +1,93 @@
 // task 1
 // - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".
 
-let newDiv = document.createElement('div')
-newDiv.id ='text'
-newDiv.innerText = 'text'
-newDiv.style.backgroundColor = 'red'
-
-let btnRemove = document.createElement('button')
-btnRemove.innerText = 'remove'
-
-newDiv.appendChild(btnRemove)
-document.body.appendChild(newDiv)
-
-btnRemove.onclick = () => {
-    newDiv.style.display = 'none'
-}
+// let newDiv = document.createElement('div')
+// newDiv.id ='text'
+// newDiv.innerText = 'text'
+// newDiv.style.backgroundColor = 'red'
+//
+// let btnRemove = document.createElement('button')
+// btnRemove.innerText = 'remove'
+//
+// newDiv.appendChild(btnRemove)
+// document.body.appendChild(newDiv)
+//
+// btnRemove.onclick = () => {
+//     newDiv.style.display = 'none'
+// }
 
 // task 2
 // - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
 
-let btnSelfRemove = document.createElement('button')
-btnSelfRemove.innerText = 'self remove'
-document.body.appendChild(btnSelfRemove)
+// let btnSelfRemove = document.createElement('button')
+// btnSelfRemove.innerText = 'self remove'
+// document.body.appendChild(btnSelfRemove)
+//
+// btnSelfRemove.onclick = () => {
+//     btnSelfRemove.style.display = 'none'
+// }
 
-btnSelfRemove.onclick = () => {
-    btnSelfRemove.style.display = 'none'
-}
-
+// task 3
 // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
+
+// let labelAge = document.createElement('label')
+// let inputAge = document.createElement('input')
+// let btnReadAge = document.createElement('button')
 //
+// labelAge.innerText = 'enter your age:'
+// inputAge.style.margin = '20px'
+// btnReadAge.innerText = 'ok'
+//
+// document.body.appendChild(labelAge)
+// document.body.appendChild(inputAge)
+// document.body.appendChild(btnReadAge)
+//
+// btnReadAge.onclick = () => {
+//     const age = inputAge.value
+//     if (age < 18){
+//         alert('you are under 18')
+//     }
+// }
+
+// task 4
 // - Создайте меню, которое раскрывается/сворачивается при клике
+
+// let divMenu = document.createElement('div')
+// let spanNavicon = document.createElement('span')
+// let spanMenu = document.createElement('span')
+// divMenu.style.backgroundColor = 'green'
+// divMenu.style.width = '100px'
+// spanNavicon.innerHTML = '&#9776'
+// spanMenu.innerText = 'menu'
 //
+// divMenu.appendChild(spanNavicon)
+// divMenu.appendChild(spanMenu)
+// document.body.appendChild(divMenu)
+//
+// function createMenuItems(numOfItems) {
+//     for (let i = 0; i < numOfItems; i++) {
+//         let divMenuItem = document.createElement('div')
+//         divMenuItem.style.paddingLeft = '20px'
+//         divMenuItem.className = 'menu-item'
+//         divMenuItem.innerText = `item №${i+1}`
+//         divMenuItem.style.display = 'none'
+//         divMenu.appendChild(divMenuItem)
+//     }
+// }
+//
+// createMenuItems(10)
+//
+// divMenu.onclick = () => {
+//     let menuItems = document.getElementsByClassName('menu-item')
+//     for (let i = 0; i < menuItems.length; i++) {
+//         if (menuItems[i].style.display === 'none') {
+//             menuItems[i].style.display = 'block'
+//         } else {
+//             menuItems[i].style.display = 'none'
+//         }
+//     }
+// }
+
 // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
 //     Вывести список комментариев в документ, каждый в своем блоке.
 //     Добавьте каждому комментарию по кнопке для сворачивания его body.
