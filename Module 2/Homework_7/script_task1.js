@@ -91,7 +91,50 @@
 // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
 //     Вывести список комментариев в документ, каждый в своем блоке.
 //     Добавьте каждому комментарию по кнопке для сворачивания его body.
-//
+
+let arrOfComments = [{title : 'Comment №1', body: 'hi'},
+                     {title : 'Comment №2', body: 'hello'},
+                     {title : 'Comment №3', body: 'good morning'},
+                     {title : 'Comment №4', body: 'good afternoon'},
+                     {title : 'Comment №5', body: 'good evening'}]
+
+let blockOfComments = document.createElement('div')
+let numberOfComment = 1
+for (const comment of arrOfComments) {
+    let divComment = document.createElement('div')
+    let divCommentTitle = document.createElement('div')
+    let divCommentBody = document.createElement('div')
+    let btnHideCommentBody = document.createElement('button')
+
+    btnHideCommentBody.innerText = 'hide'
+    btnHideCommentBody.style.marginLeft = '20px'
+
+    divCommentBody.className = `comment-body${numberOfComment}`
+    divCommentBody.innerText = comment.body
+    divCommentBody.style.paddingLeft = '20px'
+    divCommentBody.style.margin = '5px'
+
+    divCommentTitle.innerText = comment.title
+
+    divComment.appendChild(divCommentTitle)
+    divComment.appendChild(divCommentBody)
+    divComment.appendChild(btnHideCommentBody)
+    blockOfComments.appendChild(divComment)
+
+    btnHideCommentBody.onclick = () => {
+
+        if (divCommentBody.style.display === 'none') {
+            divCommentBody.style.display = 'block'
+            btnHideCommentBody.innerText = 'show'
+        } else {
+            divCommentBody.style.display = 'none'
+        }
+    }
+    numberOfComment++
+}
+document.body.appendChild(blockOfComments)
+
+
 // - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
 //     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
 // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
