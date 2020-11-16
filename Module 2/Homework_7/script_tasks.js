@@ -104,10 +104,10 @@
 //     let divComment = document.createElement('div')
 //     let divCommentTitle = document.createElement('div')
 //     let divCommentBody = document.createElement('div')
-//     let btnHideCommentBody = document.createElement('button')
+//     let btnDisplayCommentBody = document.createElement('button')
 //
-//     btnHideCommentBody.innerText = 'hide'
-//     btnHideCommentBody.style.marginLeft = '20px'
+//     btnDisplayCommentBody.innerText = 'hide'
+//     btnDisplayCommentBody.style.marginLeft = '20px'
 //
 //     divCommentBody.className = `comment-body${numberOfComment}`
 //     divCommentBody.innerText = comment.body
@@ -118,40 +118,121 @@
 //
 //     divComment.appendChild(divCommentTitle)
 //     divComment.appendChild(divCommentBody)
-//     divComment.appendChild(btnHideCommentBody)
+//     divComment.appendChild(btnDisplayCommentBody)
 //     blockOfComments.appendChild(divComment)
 //
-//     btnHideCommentBody.onclick = () => {
+//     btnDisplayCommentBody.onclick = () => {
 //         if (divCommentBody.style.display === 'none') {
 //             divCommentBody.style.display = 'block'
-//             btnHideCommentBody.innerText = 'hide'
+//             btnDisplayCommentBody.innerText = 'hide'
 //         } else {
 //             divCommentBody.style.display = 'none'
-//             btnHideCommentBody.innerText = 'show'
+//             btnDisplayCommentBody.innerText = 'show'
 //         }
 //     }
 //     numberOfComment++
 // }
 // document.body.appendChild(blockOfComments)
 
-
+// task 6
 // - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
 //     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
 // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
+
+// const numOfForm = 2
+// const numOfInput = 2
+// for (let i = 0; i < numOfForm; i++) {
+//     let divWithFormsAndBtns = document.createElement('div')
+//     let newForm = document.createElement('form')
+//     let btnSubmit = document.createElement('button')
+//     newForm.name = `myForm${i+1}`
+//     newForm.id = 'form'
+//     btnSubmit.name = `btnSubmit`
+//     btnSubmit.innerText = 'submit'
 //
+//     for (let j = 0; j < numOfInput; j++) {
+//         let newInput = document.createElement('input')
+//         newInput.name = `input${j+1}`
+//         newForm.appendChild(newInput)
+//     }
+//     divWithFormsAndBtns.appendChild(newForm)
+//     divWithFormsAndBtns.appendChild(btnSubmit)
+//     document.body.appendChild(divWithFormsAndBtns)
+// }
+//
+// let btnSubmit = document.getElementsByName('btnSubmit')
+//
+// btnSubmit[0].onclick = () => {
+//     let myForm = document.forms.myForm1
+//     console.log(myForm.input1.value);
+//     console.log(myForm.input2.value);
+// }
+//
+// btnSubmit[1].onclick = () => {
+//     let myForm = document.forms.myForm2
+//     console.log(myForm.input1.value);
+//     console.log(myForm.input2.value);
+// }
+
+
+// task 7
 // - Створити функцію, яка генерує таблицю.
 //     Перший аргумент визначає кількість строк.
 //     Другий параметр визначає кліькіть ячеєк в кожній строці.
 //     Третій параметр визначає елемент в який потрібно таблицю додати.
-//
-//
+
+// task 8
 // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
+
+// function generateTable(rows, columns, id, content) {
+//     let elemForInsertion = document.getElementById(id)
+//     let table = document.createElement('table')
+//     for (let i = 0; i < rows; i++) {
+//         let tr = document.createElement('tr')
+//         for (let j = 0; j < columns; j++) {
+//             let td = document.createElement('td')
+//             td.innerText = content
+//             tr.appendChild(td)
+//         }
+//         table.appendChild(tr)
+//     }
+//     elemForInsertion.appendChild(table)
+// }
 //
+// let rows
+// let columns
+// let content
+//
+// for (let i = 0; i < 3; i++) {
+//     let input = document.createElement('input');
+//     input.name = 'input'
+//     input.style.display = 'block'
+//     document.body.appendChild(input)
+// }
+// let btnReadInfoForTable = document.createElement('button')
+// btnReadInfoForTable.innerText = 'generate table'
+//
+// document.body.appendChild(btnReadInfoForTable)
+//
+//
+//
+// btnReadInfoForTable.onclick = () => {
+//     let input = document.getElementsByName('input')
+//     rows = input[0].value
+//     columns = input[1].value
+//     content = input[2].value
+//     generateTable(rows, columns, 'insert-table-here', content)
+// }
+
+//task 9
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
-//
-//
+
+
+
+
+
 // - Сворити масив не цензцрних слів.
 //     Сворити інпут текстового типу.
 //     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
