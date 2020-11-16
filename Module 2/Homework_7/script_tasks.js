@@ -223,34 +223,120 @@
 //     rows = input[0].value
 //     columns = input[1].value
 //     content = input[2].value
-//     generateTable(rows, columns, 'insert-table-here', content)
+//     generateTable(rows, columns, 'insert-here', content)
 // }
 
 //task 9
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
 
+// let arrOfimg = [{img_src: "Legend.jpg"},
+//                 {img_src: "Maks_Fury_Road.jpg"},
+//                 {img_src: "Venom.jpg"},
+//                 {img_src: "Vychyvshiy.jpg"}]
+//
+// let divForCarousel= document.createElement('div')
+// let img = document.createElement('img')
+// let btnLeft = document.createElement('button')
+// btnLeft.innerText = 'left'
+// let btnRight = document.createElement('button')
+// btnRight.innerText = 'right'
+//
+// let num = 0
+// img.src = arrOfimg[num].img_src
+// divForCarousel.appendChild(img)
+// divForCarousel.appendChild(btnLeft)
+// divForCarousel.appendChild(btnRight)
+// document.body.appendChild(divForCarousel)
+//
+// btnLeft.onclick = () => {
+//     num - 1 < 0 ? num = arrOfimg.length - 1 : num= num-1
+//     img.src = arrOfimg[num].img_src
+// }
+// btnRight.onclick = () => {
+//     num + 1 > arrOfimg.length - 1 ? num = 0 : num++
+//     img.src = arrOfimg[num].img_src
+//
+// }
 
-
-
-
+//task 10
 // - Сворити масив не цензцрних слів.
 //     Сворити інпут текстового типу.
 //     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
 // кинути алерт з попередженням.
 //     Перевірку робити при натисканні на кнопку
+
+// arrOfSwearWords = ['fuck', 'shit', 'bastard', 'crap']
 //
+// let input = document.createElement('input')
+// input.type = 'text'
+// let btnCheck = document.createElement('button')
+// btnCheck.innerText = 'check'
+// document.body.appendChild(input)
+// document.body.appendChild(btnCheck)
+// btnCheck.onclick = () => {
+//     for (const word of arrOfSwearWords) {
+//         if (input.value === word){
+//             alert('I will ban you right now')
+//        }
 //
+//     }
+// }
+
+// task 11
 // - Сворити масив не цензцрних слів.
 //     Сворити інпут текстового типу.
 //     Потрібно перевіряти чи не містить ціле речення в собі погані слова.
 //     Кинути алерт з попередженням у випадку якщо містить.
 //     Перевірку робити при натисканні на кнопку
 //
+
+// arrOfSwearWords = ['fuck', 'shit', 'bastard', 'crap']
+// let input = document.createElement('input')
+// input.type = 'text'
+// let btnCheck = document.createElement('button')
+// btnCheck.innerText = 'check'
+// document.body.appendChild(input)
+// document.body.appendChild(btnCheck)
 //
-//
+// btnCheck.onclick = () => {
+//     let sentence = input.value
+//     for (const swearWord of arrOfSwearWords) {
+//         if (sentence.includes(swearWord)){
+//             alert(`I will ban you right now for such a word`)
+//         }
+//     }
+// }
+
+// task 12
 // -- создать скрипт, который берет считывает на странице (rules.html) текст и делает сбоку меню-оглавление по всем заголовкам которые есть в тексте.
 //     При клике на пункт оглавления вы должны отправляться к этому пункту в тексте
+
+// const arrOfHeaders = document.getElementsByTagName('h2')
+// const content = document.getElementById('content')
+// const menu = document.getElementById('insert-here')
+// const wrap = document.getElementById('wrap')
+// const ulMenu = document.createElement('ul')
+// for (let i = 0; i < arrOfHeaders.length; i++) {
+//     const itemMenu = document.createElement('li')
+//     const a = document.createElement('a')
+//     let link = 'link'+i
+//     a.href = '#' + link
+//     arrOfHeaders[i].setAttribute('id', link)
+//     a.innerHTML = arrOfHeaders[i].innerText
+//     itemMenu.appendChild(a)
+//     ulMenu.appendChild(itemMenu)
+// }
+// menu.appendChild(ulMenu)
 //
+// content.style.display = 'flex'
+// content.style.flexDirection = 'row'
+// menu.style.width = '200px'
+
+
+
+
+
+// task 13
 // -- взять массив пользователей
 // let usersWithAddress = [
 //     {id:1,name: 'vasya', age: 31, status: false, address: {city: 'Lviv', street: 'Shevchenko', number: 16}},
@@ -270,13 +356,71 @@
 // 2й - оставляет старше 29 лет включительно
 // 3й - оставляет тех у кого город киев
 // Данные выводить в документ
+
+// let chBoxFilterByStatus = document.createElement('input')
+// let chBoxFilterByAge = document.createElement('input')
+// let chBoxFilterByCity = document.createElement('input')
+// chBoxFilterByStatus.type = 'checkbox'
+// chBoxFilterByAge.type = 'checkbox'
+// chBoxFilterByCity.type = 'checkbox'
+//
+// let labelStatus =document.createElement('label')
+// let labelAge =document.createElement('label')
+// let labelCity =document.createElement('label')
+//
+// labelStatus.innerText = 'true status'
+// labelAge.innerText = '> 29 years'
+// labelCity.innerText = 'from Kiev '
+//
+// let btnOK = document.createElement('button')
+// btnOK.innerText = 'Ok'
+//
+// let div = document.createElement('div')
 //
 //
+// document.body.appendChild(chBoxFilterByStatus)
+// document.body.appendChild(labelStatus)
+// document.body.appendChild(chBoxFilterByAge)
+// document.body.appendChild(labelAge)
+// document.body.appendChild(chBoxFilterByCity)
+// document.body.appendChild(labelCity)
+// document.body.appendChild(btnOK)
 //
+//
+// btnOK.onclick = () => {
+//     div.innerText = JSON.stringify(users)
+//     if (chBoxFilterByStatus.checked){
+//         users = users.filter(value => !value.status)
+//     }
+//     if (chBoxFilterByAge.checked) {
+//         users = users.filter(value => value.age >= 29)
+//     }
+//     if (chBoxFilterByCity.checked){
+//         users = users.filter(value => value.address.city === 'Kyiv')
+//     }
+//     console.log(users);
+//     div.innerText = JSON.stringify(users)
+//     document.body.appendChild(div)
+// }
+
+
+//i didn't decide :(
+//I'll try later
+// task 14
+// *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
+
+// task 15
 // *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
 // при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
 // НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
-//     Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
-//
-//
-// *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
+// Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
+
+
+
+
+
+
+
+
+
+
