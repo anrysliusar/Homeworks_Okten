@@ -1,6 +1,6 @@
 // task 1
 // - Создать произвольный елемент с id = text.  Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".
-
+//
 // let newDiv = document.createElement('div')
 // newDiv.id ='text'
 // newDiv.innerText = 'text'
@@ -15,10 +15,10 @@
 // btnRemove.onclick = () => {
 //     newDiv.style.display = 'none'
 // }
-
+//
 // task 2
 // - Создайте кнопку, при клике на которую, она будет скрывать сама себя.
-
+//
 // let btnSelfRemove = document.createElement('button')
 // btnSelfRemove.innerText = 'self remove'
 // document.body.appendChild(btnSelfRemove)
@@ -26,10 +26,10 @@
 // btnSelfRemove.onclick = () => {
 //     btnSelfRemove.style.display = 'none'
 // }
-
+//
 // task 3
 // - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
-
+//
 // let labelAge = document.createElement('label')
 // let inputAge = document.createElement('input')
 // let btnReadAge = document.createElement('button')
@@ -48,10 +48,10 @@
 //         alert('you are under 18')
 //     }
 // }
-
+//
 // task 4
 // - Создайте меню, которое раскрывается/сворачивается при клике
-
+//
 // let divMenu = document.createElement('div')
 // let spanNavicon = document.createElement('span')
 // let spanMenu = document.createElement('span')
@@ -87,11 +87,11 @@
 //         }
 //     }
 // }
-
+//
 // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
 //     Вывести список комментариев в документ, каждый в своем блоке.
 //     Добавьте каждому комментарию по кнопке для сворачивания его body.
-
+//
 // let arrOfComments = [{title : 'Comment №1', body: 'hi'},
 //                      {title : 'Comment №2', body: 'hello'},
 //                      {title : 'Comment №3', body: 'good morning'},
@@ -133,12 +133,12 @@
 //     numberOfComment++
 // }
 // document.body.appendChild(blockOfComments)
-
+//
 // task 6
 // - створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
 //     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
 // Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.
-
+//
 // const numOfForm = 2
 // const numOfInput = 2
 // for (let i = 0; i < numOfForm; i++) {
@@ -160,32 +160,31 @@
 //     document.body.appendChild(divWithFormsAndBtns)
 // }
 //
-// let btnSubmit = document.getElementsByName('btnSubmit')
+// let [btnSubmit1, btnSubmit2] = document.getElementsByName('btnSubmit')
 //
-// btnSubmit[0].onclick = () => {
+// btnSubmit1.onclick = () => {
 //     let myForm = document.forms.myForm1
 //     console.log(myForm.input1.value);
 //     console.log(myForm.input2.value);
 // }
 //
-// btnSubmit[1].onclick = () => {
+// btnSubmit2.onclick = () => {
 //     let myForm = document.forms.myForm2
 //     console.log(myForm.input1.value);
 //     console.log(myForm.input2.value);
 // }
-
-
+//
 // task 7
 // - Створити функцію, яка генерує таблицю.
 //     Перший аргумент визначає кількість строк.
 //     Другий параметр визначає кліькіть ячеєк в кожній строці.
 //     Третій параметр визначає елемент в який потрібно таблицю додати.
-
+//
 // task 8
 // - Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
-
+//
 // function generateTable(rows, columns, id, content) {
 //     let elemForInsertion = document.getElementById(id)
 //     let table = document.createElement('table')
@@ -225,10 +224,10 @@
 //     content = input[2].value
 //     generateTable(rows, columns, 'insert-here', content)
 // }
-
-//task 9
+//
+// task 9
 // - Напишите «Карусель» – ленту изображений, которую можно листать влево-вправо нажатием на стрелочки.
-
+//
 // let arrOfimg = [{img_src: "Legend.jpg"},
 //                 {img_src: "Maks_Fury_Road.jpg"},
 //                 {img_src: "Venom.jpg"},
@@ -257,14 +256,14 @@
 //     img.src = arrOfimg[num].img_src
 //
 // }
-
-//task 10
+//
+// task 10
 // - Сворити масив не цензцрних слів.
 //     Сворити інпут текстового типу.
 //     Якщо людина вводить слово і воно міститься в масиві не цензурних слів
 // кинути алерт з попередженням.
 //     Перевірку робити при натисканні на кнопку
-
+//
 // arrOfSwearWords = ['fuck', 'shit', 'bastard', 'crap']
 //
 // let input = document.createElement('input')
@@ -281,7 +280,7 @@
 //
 //     }
 // }
-
+//
 // task 11
 // - Сворити масив не цензцрних слів.
 //     Сворити інпут текстового типу.
@@ -289,7 +288,7 @@
 //     Кинути алерт з попередженням у випадку якщо містить.
 //     Перевірку робити при натисканні на кнопку
 //
-
+//
 // arrOfSwearWords = ['fuck', 'shit', 'bastard', 'crap']
 // let input = document.createElement('input')
 // input.type = 'text'
@@ -306,11 +305,11 @@
 //         }
 //     }
 // }
-
+//
 // task 12
 // -- создать скрипт, который берет считывает на странице (rules.html) текст и делает сбоку меню-оглавление по всем заголовкам которые есть в тексте.
 //     При клике на пункт оглавления вы должны отправляться к этому пункту в тексте
-
+//
 // const arrOfHeaders = document.getElementsByTagName('h2')
 // const content = document.getElementById('content')
 // const menu = document.getElementById('insert-here')
@@ -331,10 +330,8 @@
 // content.style.display = 'flex'
 // content.style.flexDirection = 'row'
 // menu.style.width = '200px'
-
-
-
-
+//
+//
 
 // task 13
 // -- взять массив пользователей
@@ -356,7 +353,7 @@
 // 2й - оставляет старше 29 лет включительно
 // 3й - оставляет тех у кого город киев
 // Данные выводить в документ
-
+//
 // let chBoxFilterByStatus = document.createElement('input')
 // let chBoxFilterByAge = document.createElement('input')
 // let chBoxFilterByCity = document.createElement('input')
@@ -402,25 +399,25 @@
 //     div.innerText = JSON.stringify(users)
 //     document.body.appendChild(div)
 // }
-
-
-//i didn't decide :(
-//I'll try to do later
+//
+//
+// i didn't decide :(
+// I'll try to do later
 // task 14
 // *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
-
+//
 // task 15
 // *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
 // при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
 // НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
 // Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
-
-
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
