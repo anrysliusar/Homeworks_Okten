@@ -5,17 +5,17 @@
 //     Має бути так
 // 1) прокинувся
 // 2) Поснідав
-// 3) почистав зуби
+// 3) почистив зуби
 // і т.д.
 //     Якщо щось пішло не так (нема шо їсти), то має бути викинута помилка і решта функцій виконуватись не мають.
 //     Якщо ж все ок, то ви маєте прожити свій звичайний день.
 //     Кожна подія має бути з рандомною (не по зростанню) затримкою.
-
-const min = 1
-const max = 10
-function generateRandomTimeout(min, max) {
-    return Math.floor(Math.random() * (max - min) + min)
-}
+//
+// const min = 1000
+// const max = 2000
+// function generateRandomTimeout(min, max) {
+//     return Math.floor(Math.random() * (max - min) + min)
+// }
 
 //task 1
 //callback
@@ -103,10 +103,10 @@ function generateRandomTimeout(min, max) {
 //
 // getUp(true, (err, success) => {
 //     if (err) {
-//         console.log(`Ooops ${err}`)
+//         console.log(`Oops ${err}`)
 //         return
 //     }
-//     console.log(`Hoooray, ${success}`);
+//     console.log(`Hooray, ${success}`);
 //     haveBreakfast("Sandwich", (nothingToEat, food) => {
 //         if (nothingToEat) {
 //             console.log(`There is nothing to eat: ${nothingToEat}`)
@@ -252,14 +252,14 @@ function generateRandomTimeout(min, max) {
 //         }, generateRandomTimeout(min, max))
 //     })
 // }
-//
+
 // getUp(true)
 //     .then(value => {
 //         if (!value) {
-//             console.log(`Ooops ${value}`)
+//             console.log(`Oops ${value}`)
 //             return
 //         }
-//         console.log(`Hoooray, ${value}`);
+//         console.log(`Hooray, ${value}`);
 //         return haveBreakfast('Sandwich')
 //     })
 //     .then(food => {
@@ -310,7 +310,130 @@ function generateRandomTimeout(min, max) {
 //         }
 //         console.log(fallAsleep);
 //     })
+//     .catch(error =>{
+//         console.log(error);
+//     })
 
 //task 3
 //async await
 
+// function getUp(isAlive) {
+//     return new Promise((resolve, reject) => {
+//         console.log('start my day');
+//         setTimeout(() => {
+//             if (!isAlive){
+//                 reject('Oops, i`m died :((')
+//                 return
+//             }
+//             resolve('Hooray, i get up')
+//
+//         }, generateRandomTimeout(min, max))
+//     })
+//
+// }
+//
+//
+// function haveBreakfast(food) {
+//     return new Promise((resolve, reject) => {
+//         console.log('I go to the fridge')
+//         setTimeout(() => {
+//             if (!food) {
+//                 reject('There is nothing to eat: fridge empty ((')
+//                 return
+//             }
+//             resolve(`I ate ${food}`)
+//         }, generateRandomTimeout(min, max))
+//     })
+// }
+//
+// function brushTeeth(toothpaste) {
+//     return new Promise((resolve, reject) => {
+//         console.log("I am trying to brush my teeth")
+//
+//         setTimeout(() => {
+//             if (!toothpaste) {
+//                 reject('I didn`t brush my teeth because there is no my toothpaste')
+//                 return
+//             }
+//             resolve(`I brushed my teeth with toothpaste ${toothpaste}`)
+//         }, generateRandomTimeout(min, max))
+//     })
+// }
+//
+// function goToClass(isLesson) {
+//     return new Promise((resolve, reject) => {
+//         console.log("I'm trying to get to class")
+//         setTimeout(() => {
+//             if (!isLesson) {
+//                 reject("The lesson was canceled")
+//                 return
+//             }
+//             resolve("I'm listening to the lecturer")
+//
+//         }, generateRandomTimeout(min, max))
+//     })
+// }
+//
+// function haveLunch(food) {
+//     return new Promise((resolve, reject) => {
+//         console.log(`I hungry`)
+//
+//         setTimeout(() => {
+//             if (!food) {
+//                 reject('There is nothing to eat: fridge empty ((')
+//                 return
+//             }
+//             resolve(`I ate ${food}`)
+//         }, generateRandomTimeout(min, max))
+//     })
+// }
+//
+// function doHomework(success) {
+//     return new Promise((resolve, reject) => {
+//         console.log("Start to do my Homework")
+//
+//         setTimeout(() => {
+//             if (!success) {
+//                 reject("nothing to do")
+//                 return
+//             }
+//             resolve("Homework is done")
+//         }, generateRandomTimeout(min, max))
+//     })
+// }
+// function goToBed(isHomeworkDone) {
+//     return new Promise((resolve, reject) => {
+//         console.log('I wanna sleep')
+//
+//         setTimeout(() => {
+//             if (!isHomeworkDone) {
+//                 reject("don`t sleep, work hard")
+//                 return
+//             }
+//             resolve("finally, i go to bed")
+//         }, generateRandomTimeout(min, max))
+//     })
+// }
+//
+// async function routine() {
+//     try {
+//         const wakeUp = await getUp(true)
+//         console.log(wakeUp);
+//         const breakfast = await haveBreakfast('sandwich')
+//         console.log(breakfast);
+//         const teethBrush = await brushTeeth('colgate')
+//         console.log(teethBrush);
+//         const classWork = await goToClass(true)
+//         console.log(classWork);
+//         const lunch = await haveLunch('soup')
+//         console.log(lunch);
+//         const homework = await doHomework(true)
+//         console.log(homework);
+//         const sleepTime = await goToBed(true)
+//         console.log(sleepTime);
+//     }catch (e) {
+//         console.log(e);
+//     }
+// }
+//
+// routine()
