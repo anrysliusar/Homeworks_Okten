@@ -15,31 +15,62 @@
 // l (затримка 0.7)
 // о (затримка 1)
 
+//first solution
 let sentence = 'Lorem ipsum dolor sit amet, consectetur'
 
-printByLetter(sentence, 'content')
+typeByLetter(sentence, 'content')
 
-async function printByLetter(text, id) {
-    let arrOfLetters = text.split('')
-    const content = document.getElementById(id)
-    console.log(arrOfLetters);
-    for (const letter of arrOfLetters) {
-        await setTimeoutToPrintLetter(letter, content)
-            .then(value => {console.log(value);})
-
-    }
-}
-
-function setTimeoutToPrintLetter(letter, elementById) {
-    return new Promise((resolve, reject) => {
-        const randTimeout = generateRandomTimeout()
-        setTimeout(() =>{
-            elementById.textContent += letter
-            resolve(`${letter} - затримка ${randTimeout}`)
-        }, randTimeout)
-    })
-}
+// async function typeByLetter(text, id) {
+//     let arrOfLetters = text.split('')
+//     const content = document.getElementById(id)
+//     console.log(arrOfLetters);
+//     for (const letter of arrOfLetters) {
+//         await setTimeoutToTypeLetter(letter, content)
+//             .then(value => {console.log(value);})
+//
+//     }
+// }
+//
+// function setTimeoutToTypeLetter(letter, elementById) {
+//     return new Promise((resolve, reject) => {
+//         const randTimeout = generateRandomTimeout()
+//         setTimeout(() =>{
+//             elementById.textContent += letter
+//             resolve(`${letter} - затримка ${randTimeout}`)
+//         }, randTimeout)
+//     })
+// }
 
 function generateRandomTimeout() {
     return Math.random() * 1000
 }
+
+//second solution
+
+function typeByLetter() {
+
+}
+
+
+// отсортировать с помощью setTimeout() массив  чисел [4,1,3,2,5] -> [1,2,3,4,5] (массив может быть любой длины)
+// условие: нельзя пользоваться методами массивов
+// array = [4, 1, 3, 2, 5]
+// sorted_array = []
+// array.forEach((i) => {
+//     setTimeout(() => {
+//         sorted_array.push(i)
+//     }, i * 1000)
+// })
+// setTimeout(() => {
+//     console.log(sorted_array)
+// }, 7000)
+
+// Timer for page
+// let span = document.getElementById("number")
+// let interval = setInterval(() => {
+//     if (Number(span.innerText) > 0) {
+//         span.innerText = String(Number(span.innerText) - 1)
+//     } else {
+//         clearInterval(interval)
+//     }
+// }, 10000)
