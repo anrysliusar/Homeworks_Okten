@@ -16,9 +16,13 @@
 // о (затримка 1)
 
 //first solution
-let sentence = 'Lorem ipsum dolor sit amet, consectetur'
+// let sentence = 'Lorem ipsum dolor sit amet, consectetur'
+//
+// typeByLetter(sentence, 'content')
 
-typeByLetter(sentence, 'content')
+// function generateRandomTimeout() {
+//     return Math.random() * 1000
+// }
 
 // async function typeByLetter(text, id) {
 //     let arrOfLetters = text.split('')
@@ -41,15 +45,30 @@ typeByLetter(sentence, 'content')
 //     })
 // }
 
-function generateRandomTimeout() {
-    return Math.random() * 1000
-}
+
 
 //second solution
 
-function typeByLetter() {
+// let sentence = 'Lorem ipsum dolor sit amet, consectetur'
+// typeByLetter(sentence, 'content')
 
-}
+// function generateRandomTimeout() {
+//     return Math.random() * 10000
+// }
+
+// function typeByLetter(text, id) {
+//     let arrOfLetters = text.split('')
+//     const content = document.getElementById(id)
+//     for (const letter of arrOfLetters) {
+//         setInterval(() =>{
+//             content.textContent += letter
+//         }, generateRandomTimeout())
+//     }
+//     console.log(arrOfLetters);
+//     for (const letter of arrOfLetters) {
+//         await setTimeoutToTypeLetter(letter, content)
+//             .then(value => {console.log(value);})
+// }
 
 
 // отсортировать с помощью setTimeout() массив  чисел [4,1,3,2,5] -> [1,2,3,4,5] (массив может быть любой длины)
