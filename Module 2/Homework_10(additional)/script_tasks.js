@@ -1,5 +1,4 @@
 //task 1
-
 // Реалізувати друкарську машинку.
 //     У вас є текст "Hello World". (або юудь який інший на ваш розсуд)
 // Ваша функція має друкувати цей текст по 1 симоволу в браузері.
@@ -14,6 +13,7 @@
 // о (затримка 1)
 
 //first solution
+
 // let sentence = 'Lorem ipsum dolor sit amet, consectetur'
 //
 // typeByLetter(sentence, 'content')
@@ -29,7 +29,6 @@
 //     for (const letter of arrOfLetters) {
 //         await setTimeoutToTypeLetter(letter, content)
 //             .then(value => {console.log(value);})
-//
 //     }
 // }
 //
@@ -65,7 +64,6 @@
 //             }
 //             i++
 //         }, generateRandomInterval())
-//
 // }
 
 
@@ -83,4 +81,3 @@
 // setTimeout(() => {
 //     console.log(sortedArr)
 // }, 500)
-
