@@ -49,24 +49,25 @@
 
 // let sentence = 'Lorem ipsum dolor sit amet, consectetur'
 // typeByLetter(sentence, 'content')
-
-// function generateRandomTimeout() {
-//     return Math.random() * 10000
+//
+// function generateRandomInterval() {
+//     return Math.random() * 1000
 // }
-
+//
 // function typeByLetter(text, id) {
 //     let arrOfLetters = text.split('')
 //     const content = document.getElementById(id)
-//     for (const letter of arrOfLetters) {
-//         setInterval(() =>{
-//             content.textContent += letter
-//         }, generateRandomTimeout())
-//     }
-//     console.log(arrOfLetters);
-//     for (const letter of arrOfLetters) {
-//         await setTimeoutToTypeLetter(letter, content)
-//             .then(value => {console.log(value);})
+//     let i = 0
+//     let interval = setInterval(() =>{
+//             content.textContent += arrOfLetters[i]
+//             if (i === arrOfLetters.length - 1){
+//                 clearInterval(interval)
+//             }
+//             i++
+//         }, generateRandomInterval())
+//
 // }
+
 
 //task 2
 // отсортировать с помощью setTimeout() массив  чисел [4,1,3,2,5] -> [1,2,3,4,5] (массив может быть любой длины)
