@@ -70,26 +70,18 @@
 //             .then(value => {console.log(value);})
 // }
 
-
+//task 2
 // отсортировать с помощью setTimeout() массив  чисел [4,1,3,2,5] -> [1,2,3,4,5] (массив может быть любой длины)
 // условие: нельзя пользоваться методами массивов
-// array = [4, 1, 3, 2, 5]
-// sorted_array = []
-// array.forEach((i) => {
+
+// arr = [4, 1, 3, 2, 5]
+// sortedArr = []
+// arr.forEach((i) => {
 //     setTimeout(() => {
-//         sorted_array.push(i)
-//     }, i * 1000)
+//         sortedArr.push(i)
+//     }, i * 100)
 // })
 // setTimeout(() => {
-//     console.log(sorted_array)
-// }, 7000)
+//     console.log(sortedArr)
+// }, 500)
 
-// Timer for page
-// let span = document.getElementById("number")
-// let interval = setInterval(() => {
-//     if (Number(span.innerText) > 0) {
-//         span.innerText = String(Number(span.innerText) - 1)
-//     } else {
-//         clearInterval(interval)
-//     }
-// }, 10000)
