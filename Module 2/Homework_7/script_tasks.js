@@ -400,22 +400,72 @@
 //     document.body.appendChild(div)
 // }
 //
-//
-// task 14
-// *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
-//
 // task 15
 // *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
 // при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
 // НО если у (какого-либо)дочеренего элемента есть дети, то нажатие "вперед" позволяет нам войти внутрь элемента и  выводит первого ребенка. и тд.
 // Когда все дети заканчиваются, мы выходим из данного дочернего элемента и переходим к следующему, лежащему с ним на одном уровне
+
+let buttonNext = document.createElement('button')
+buttonNext.innerText = 'next'
+let buttonPrev = document.createElement('button')
+buttonPrev.innerText = 'prev';
+document.body.append(buttonNext, buttonPrev)
+let move = (element) => {
+    let parent = null;
+    let current = element;
+    if (current === document.body) {
+        alert("End of the document")
+    }
+    buttonNext.onclick = () => {
+        if (current.nextElementSibling == null) {
+            if (current.parentElement.style.backgroundColor === 'red') {
+                current.parentElement.style.backgroundColor = '#fff'
+            }
+            parent = current.parentElement.nextElementSibling
+            if (parent == null) {
+                move(current.parentElement)
+            }
+            current = parent != null ? parent : current
+        } else if (current.children[0] !== undefined) {
+            parent = current
+            current = current.children[0];
+            if (current.parentElement.children.length === 2) {
+                current.parentElement.style.backgroundColor = 'red'
+            }
+        } else {
+            current = current.nextElementSibling
+        }
+        console.log(current)
+    }
+    buttonPrev.onclick = () => {
+        if (current === document.head) {
+            alert("It is the beginning of the document")
+        }
+        if (current.previousElementSibling === null) {
+            parent = current.parentElement.previousElementSibling
+            if (parent == null) {
+                move(current.parentElement)
+            }
+            current = parent != null ? parent : current
+        } else {
+            current = current.previousElementSibling
+        }
+        console.log(current)
+    }
+}
+move(document.getElementsByClassName('rule1')[0])
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// *** При виділені сегменту тексту на сторінці він стає жирний/курсивний/або якось іншим способом змінює свій стан
+
+// let string = 'kfjdaslfjsa'
+// string = string.slice(0, 4) + string.slice(4);
+// console.log(string)
+// document.body.onclick = () => {
+//     let selected = window.getSelection().focusNode.parentElement;
+//     let startPosition = window.getSelection().anchorOffset;
+//     let endPosition = window.getSelection().focusOffset;
+//     selected.innerHTML = selected.innerHTML.slice(0, startPosition) + `<span class="highlighted_text">${selected.innerHTML.slice(startPosition, endPosition)}</span>` + selected.innerHTML.slice(endPosition)
+//     console.log(selected.innerHTML)
+// }
+
